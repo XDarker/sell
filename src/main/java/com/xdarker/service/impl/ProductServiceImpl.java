@@ -21,6 +21,7 @@ import java.util.List;
  */
 @Service("iProductService")
 public class ProductServiceImpl implements IProductService {
+
     private final ProductInfoRepository repository;
     @Autowired
     public ProductServiceImpl(ProductInfoRepository repository) {
@@ -58,6 +59,9 @@ public class ProductServiceImpl implements IProductService {
                 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
             }
             Integer result = productInfo.getProductStock() + cartDTO.getProductQuantity();
+            productInfo.setProductStock(result);
+
+            repository.save(productInfo);
         }
     }
 

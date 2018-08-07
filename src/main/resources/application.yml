@@ -8,6 +8,9 @@ spring:
         password: root
     jpa:
         show-sql: true
+    jackson:
+        default-property-inclusion: non_null                 #null值过滤
+
     dbcp2:
         min-idle: 5                                           # 数据库连接池的最小维持连接数
         initial-size: 5                                       # 初始化连接数

@@ -1,12 +1,9 @@
 package com.xdarker.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.xdarker.common.OrderStatusEnum;
-import com.xdarker.common.PayStatusEnum;
 import com.xdarker.pojo.OrderDetail;
+import com.xdarker.utils.serializer.Date2LongSerializer;
 import lombok.Data;
-
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -17,7 +14,7 @@ import java.util.List;
  */
 @Data
 //@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-//@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonInclude(JsonInclude.Include.NON_NULL)   //字段为空不返回前端
 public class OrderDTO {
 
     /** 订单id. */
@@ -45,11 +42,11 @@ public class OrderDTO {
     private Integer payStatus;
 
     /** 创建时间. */
-//    @JsonSerialize(using = Date2LongSerializer.class)
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
 
     /** 更新时间. */
-//    @JsonSerialize(using = Date2LongSerializer.class)
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 
     List<OrderDetail> orderDetailList;

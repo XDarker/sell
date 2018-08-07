@@ -1,5 +1,7 @@
 package com.xdarker.service.impl;
 
+import com.xdarker.common.OrderStatusEnum;
+import com.xdarker.common.PayStatusEnum;
 import com.xdarker.dto.OrderDTO;
 import com.xdarker.pojo.OrderDetail;
 import lombok.extern.slf4j.Slf4j;
@@ -72,14 +74,24 @@ public class OrderServiceImplTest {
 
     @Test
     public void cancel() {
+        OrderDTO orderDTO = orderService.findOne("1533557121736331332");
+        OrderDTO result = orderService.cancel(orderDTO);
+        Assert.assertEquals(OrderStatusEnum.CANCEL.getCode(),result.getOrderStatus());
+
     }
 
     @Test
     public void finish() {
+        OrderDTO orderDTO = orderService.findOne("1533557121736331332");
+        OrderDTO result = orderService.finish(orderDTO);
+        Assert.assertEquals(OrderStatusEnum.FINISHED.getCode(),result.getOrderStatus());
     }
 
     @Test
     public void paid() {
+        OrderDTO orderDTO = orderService.findOne("1533557121736331332");
+        OrderDTO result = orderService.paid(orderDTO);
+        Assert.assertEquals(PayStatusEnum.SUCCESS.getCode(),result.getPayStatus());
     }
 
     @Test
