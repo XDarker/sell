@@ -95,6 +95,9 @@ public class OrderServiceImplTest {
     }
 
     @Test
-    public void findList1() {
+    public void List() {
+        PageRequest pageRequest = new PageRequest(0,3);
+        Page<OrderDTO> orderDTOPage = orderService.findList(pageRequest);
+        Assert.assertNotEquals(0,orderDTOPage.getTotalElements());
     }
 }

@@ -1,7 +1,11 @@
 package com.xdarker.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.xdarker.common.OrderStatusEnum;
+import com.xdarker.common.PayStatusEnum;
 import com.xdarker.pojo.OrderDetail;
+import com.xdarker.utils.EnumUtil;
 import com.xdarker.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 import java.math.BigDecimal;
@@ -51,13 +55,13 @@ public class OrderDTO {
 
     List<OrderDetail> orderDetailList;
 
-//    @JsonIgnore
-//    public OrderStatusEnum getOrderStatusEnum() {
-//        return EnumUtil.getByCode(orderStatus, OrderStatusEnum.class);
-//    }
-//
-//    @JsonIgnore
-//    public PayStatusEnum getPayStatusEnum() {
-//        return EnumUtil.getByCode(payStatus, PayStatusEnum.class);
-//    }
+    @JsonIgnore
+    public OrderStatusEnum getOrderStatusEnum() {
+        return EnumUtil.getByCode(orderStatus, OrderStatusEnum.class);
+    }
+
+    @JsonIgnore
+    public PayStatusEnum getPayStatusEnum() {
+        return EnumUtil.getByCode(payStatus, PayStatusEnum.class);
+    }
 }

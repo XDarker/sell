@@ -30,3 +30,11 @@ server:
 #    #path: D:\XSJ\Java\IDEAWorkSpace\sell\log
 #    file: D:\XSJ\Java\IDEAWorkSpace\sell\log\sell.log
 #    level: debug
+
+#微信数据配置
+wechat:
+    mpAppid: wxd670bc2d4a5f509b
+    mpAppSecret: a22dcb18dae4b1ffebffc9750d1ae17c
+    mchId: 1483469312
+    mchKey: C5245D70627C1F8E9964D494B0735025
+    keyPath:
