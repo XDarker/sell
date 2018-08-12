@@ -2,7 +2,7 @@ package com.xdarker.controller;
 
 import com.xdarker.common.ResultEnum;
 import com.xdarker.dto.OrderDTO;
-import com.xdarker.expection.SellException;
+import com.xdarker.exception.SellException;
 import com.xdarker.service.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

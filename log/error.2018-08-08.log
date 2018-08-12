@@ -4191,7 +4191,7 @@ FTL stack trace ("~" means nesting-related):
 	- Failed at: #if currentPage lte 1  [in template "order/list.ftl" at line 56, column 21]
 ----] as the response has already been committed. As a result, the response may have the wrong status code.
 【卖家端取消订单】发生异常{}
-com.xdarker.expection.SellException: 订单详情不存在
+com.xdarker.exception.SellException: 订单详情不存在
 	at com.xdarker.service.impl.OrderServiceImpl.findOne(OrderServiceImpl.java:126)
 	at com.xdarker.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$5f3741bc.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
@@ -4253,7 +4253,7 @@ com.xdarker.expection.SellException: 订单详情不存在
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 【卖家端取消订单】发生异常{}
-com.xdarker.expection.SellException: 订单详情不存在
+com.xdarker.exception.SellException: 订单详情不存在
 	at com.xdarker.service.impl.OrderServiceImpl.findOne(OrderServiceImpl.java:126)
 	at com.xdarker.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$5f3741bc.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
@@ -4315,7 +4315,7 @@ com.xdarker.expection.SellException: 订单详情不存在
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 【卖家端取消订单】发生异常{}
-com.xdarker.expection.SellException: 订单详情不存在
+com.xdarker.exception.SellException: 订单详情不存在
 	at com.xdarker.service.impl.OrderServiceImpl.findOne(OrderServiceImpl.java:126)
 	at com.xdarker.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$5f3741bc.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)

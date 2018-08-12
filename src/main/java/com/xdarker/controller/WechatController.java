@@ -1,7 +1,7 @@
 package com.xdarker.controller;
 
 import com.xdarker.common.ResultEnum;
-import com.xdarker.expection.SellException;
+import com.xdarker.exception.SellException;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.error.WxErrorException;

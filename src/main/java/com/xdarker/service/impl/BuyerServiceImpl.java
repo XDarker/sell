@@ -2,7 +2,7 @@ package com.xdarker.service.impl;
 
 import com.xdarker.common.ResultEnum;
 import com.xdarker.dto.OrderDTO;
-import com.xdarker.expection.SellException;
+import com.xdarker.exception.SellException;
 import com.xdarker.service.IBuyerService;
 import com.xdarker.service.IOrderService;
 import lombok.extern.slf4j.Slf4j;

@@ -1,8 +1,8 @@
 【取消订单】订单状态不正确, orderId=1533557121736331332, orderStatus=2
 【取消订单】订单状态不正确, orderId=1533557121736331332, orderStatus=2
 【订单支付完成】订单支付状态不正确，orderDTO=OrderDTO(orderId=1533557121736331332, buyerName=XDarker, buyerPhone=12345678900, buyerAddress=杭州, buyerOpenid=110110, orderAmount=30.00, orderStatus=0, payStatus=1, createTime=2018-08-06 20:05:22.0, updateTime=2018-08-07 14:04:18.0, orderDetailList=[OrderDetail(detailId=1533557121802357642, orderId=1533557121736331332, productId=121, productName=茉莉花茶, productPrice=10.00, productQuantity=2, productIcon=http://xxxxx.jpg), OrderDetail(detailId=1533557121822194940, orderId=1533557121736331332, productId=123, productName=皮蛋粥, productPrice=5.00, productQuantity=2, productIcon=http://xxxxx.jpg)])
-Servlet.service() for servlet [dispatcherServlet] in context with path [/sell] threw exception [Request processing failed; nested exception is com.xdarker.expection.SellException: 商品不存在] with root cause
-com.xdarker.expection.SellException: 商品不存在
+Servlet.service() for servlet [dispatcherServlet] in context with path [/sell] threw exception [Request processing failed; nested exception is com.xdarker.exception.SellException: 商品不存在] with root cause
+com.xdarker.exception.SellException: 商品不存在
 	at com.xdarker.service.impl.OrderServiceImpl.create(OrderServiceImpl.java:69)
 	at com.xdarker.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$5f3741bc.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)

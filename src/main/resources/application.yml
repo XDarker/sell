@@ -17,11 +17,15 @@ spring:
         max-total: 5                                          # 最大连接数
         max-wait-millis: 200                                  # 等待连接获取
 
+
 server:
   servlet:
     context-path: /sell
 
-
+redis:
+  host: 127.0.0.1
+  port: 6379
+  #password:
 
 #配置日志
 #logging:
@@ -30,7 +34,6 @@ server:
 #    #path: D:\XSJ\Java\IDEAWorkSpace\sell\log
 #    file: D:\XSJ\Java\IDEAWorkSpace\sell\log\sell.log
 #    level: debug
-
 #微信数据配置
 wechat:
     mpAppid: wxd670bc2d4a5f509b
@@ -38,3 +41,9 @@ wechat:
     mchId: 1483469312
     mchKey: C5245D70627C1F8E9964D494B0735025
     keyPath:
+logging:
+  level:
+    com.xdarker.pojo.mapper: trace
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml

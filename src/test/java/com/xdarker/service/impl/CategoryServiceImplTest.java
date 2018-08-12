@@ -47,7 +47,8 @@ public class CategoryServiceImplTest {
     @Test
     public void save() {
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("女生专享").setCategoryType(1);
+        productCategory.setCategoryName("女生专享");
+        productCategory.setCategoryType(1);
         ProductCategory result = categoryService.save(productCategory);
 
     }

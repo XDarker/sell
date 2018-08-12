@@ -1,11 +1,13 @@
-package com.xdarker.expection;
+package com.xdarker.exception;
 
 import com.xdarker.common.ResultEnum;
+import lombok.Getter;
 
 /**
  * Created by XDarker
  * 2018/8/6 17:37
  */
+@Getter
 public class SellException  extends  RuntimeException{
 
     private Integer code;
